@@ -1,0 +1,15 @@
+newmtl Glass
+Kd 0.6320754 0.6320754 0.6320754
+d 0.03529412
+
+newmtl SurfaceImperfections
+map_Kd SurfaceImperfections03_var1.jpg
+map_Pm SurfaceImperfections03_var2.jpg
+bump SurfaceImperfections03_nrm.jpg
+Kd 1 1 1
+d 1
+
+newmtl led_light2
+Kd 1 0.945098 0.8784314
+d 1
+
