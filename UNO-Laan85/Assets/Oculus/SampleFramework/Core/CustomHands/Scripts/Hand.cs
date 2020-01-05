@@ -33,11 +33,11 @@ namespace OVRTouchSample
         public const float THUMB_DEBOUNCE_TIME = 0.15f;
 
         [SerializeField]
-        private OVRInput.Controller m_controller;
+        private OVRInput.Controller m_controller = OVRInput.Controller.None;
         [SerializeField]
         private Animator m_animator = null;
         [SerializeField]
-        private HandPose m_defaultGrabPose;
+        private HandPose m_defaultGrabPose = null;
 
         private Collider[] m_colliders = null;
         private bool m_collisionEnabled = true;
@@ -83,20 +83,54 @@ namespace OVRTouchSample
 #endif
         }
 
-        private void Update()
-        {
-            UpdateCapTouchStates();
+		private void Update()
+		{
+			UpdatePose(OVRPlugin.Step.Render);
+		}
 
-            m_pointBlend = InputValueRateChange(m_isPointing, m_pointBlend);
-            m_thumbsUpBlend = InputValueRateChange(m_isGivingThumbsUp, m_thumbsUpBlend);
+		private OVRPlugin.HandState _currentState;
+		public bool IsTracked;
 
-            float flex = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
+		private void UpdatePose(OVRPlugin.Step renderStep)
+		{
+			OVRPlugin.Hand h = OVRPlugin.Hand.HandRight;
+			if (m_controller == OVRInput.Controller.LTouch)
+			{
+				h = OVRPlugin.Hand.HandLeft;
+			}
 
-            bool collisionEnabled = m_grabber.grabbedObject == null && flex >= THRESH_COLLISION_FLEX;
-            CollisionEnable(collisionEnabled);
+			if (!OVRPlugin.GetHandState(renderStep, h, ref _currentState))
+			{
+				IsTracked = false;
+			}
+			else
+			{
+				IsTracked = (_currentState.Status & OVRPlugin.HandStatus.HandTracked) ==
+				  OVRPlugin.HandStatus.HandTracked;
+			}
 
-            UpdateAnimStates();
-        }
+			if (!IsTracked)
+			{
+				transform.GetChild(0).gameObject.SetActive(true);
+				UpdateCapTouchStates();
+
+				m_pointBlend = InputValueRateChange(m_isPointing, m_pointBlend);
+				m_thumbsUpBlend = InputValueRateChange(m_isGivingThumbsUp, m_thumbsUpBlend);
+
+				float flex = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
+
+				bool collisionEnabled = m_grabber.grabbedObject == null && flex >= THRESH_COLLISION_FLEX;
+				CollisionEnable(collisionEnabled);
+
+				UpdateAnimStates();
+			}
+			else
+			{
+				transform.GetChild(0).gameObject.SetActive(false);		
+			}
+		}
+
+		
 
         // Just checking the state of the index and thumb cap touch sensors, but with a little bit of
         // debouncing.

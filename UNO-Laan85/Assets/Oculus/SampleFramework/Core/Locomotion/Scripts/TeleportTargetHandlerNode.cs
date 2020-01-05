@@ -51,7 +51,7 @@ public class TeleportTargetHandlerNode : TeleportTargetHandler
 		var offsetEnd = new Vector3(dest.x, dest.y + LOSOffset, dest.z);
 		if (LocomotionTeleport.AimCollisionTest(start, offsetEnd, AimCollisionLayerMask & ~TeleportLayerMask, out AimData.TargetHitInfo))
 		{
-			return false;
+			//return false;
 		}
 
 		end = dest;

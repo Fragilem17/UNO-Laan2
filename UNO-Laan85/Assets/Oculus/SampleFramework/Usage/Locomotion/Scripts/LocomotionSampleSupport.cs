@@ -44,7 +44,8 @@ public class LocomotionSampleSupport : MonoBehaviour
         {
             Debug.LogError("Need EventSystem");
         }
-		SetupTwoStickTeleport();
+		//SetupTwoStickTeleport();
+		SetupLeftStrafeRightTeleport();
 
         // SAMPLE-ONLY HACK:
         // Due to restrictions on how Unity project settings work, we just hackily set up default
@@ -162,8 +163,8 @@ public class LocomotionSampleSupport : MonoBehaviour
 
     void SetupNonCap()
     {
-        var input = TeleportController.GetComponent<TeleportInputHandlerAvatarTouch>();
-        input.InputMode = TeleportInputHandlerAvatarTouch.InputModes.SeparateButtonsForAimAndTeleport;
+        var input = TeleportController.GetComponent<TeleportInputHandlerTouch>();
+        input.InputMode = TeleportInputHandlerTouch.InputModes.SeparateButtonsForAimAndTeleport;
         input.AimButton = OVRInput.RawButton.A;
         input.TeleportButton = OVRInput.RawButton.A;
     }
@@ -171,17 +172,17 @@ public class LocomotionSampleSupport : MonoBehaviour
     void SetupTeleportDefaults()
     {
         TeleportController.enabled = true;
-        lc.PlayerController.SnapRotation = true;
+        //lc.PlayerController.SnapRotation = true;
         lc.PlayerController.RotationEitherThumbstick = false;
-        lc.PlayerController.FixedSpeedSteps = 0;
+        //lc.PlayerController.FixedSpeedSteps = 0;
         TeleportController.EnableMovement(false, false, false, false);
         TeleportController.EnableRotation(false, false, false, false);
 
-        var input = TeleportController.GetComponent<TeleportInputHandlerAvatarTouch>();
-        input.InputMode = TeleportInputHandlerAvatarTouch.InputModes.CapacitiveButtonForAimAndTeleport;
+        var input = TeleportController.GetComponent<TeleportInputHandlerTouch>();
+        input.InputMode = TeleportInputHandlerTouch.InputModes.CapacitiveButtonForAimAndTeleport;
         input.AimButton = OVRInput.RawButton.A;
         input.TeleportButton = OVRInput.RawButton.A;
-        input.CapacitiveAimAndTeleportButton = TeleportInputHandlerAvatarTouch.AimCapTouchButtons.A;
+        input.CapacitiveAimAndTeleportButton = TeleportInputHandlerTouch.AimCapTouchButtons.A;
         input.FastTeleport = false;
 
         var hmd = TeleportController.GetComponent<TeleportInputHandlerHMD>();
@@ -206,12 +207,12 @@ public class LocomotionSampleSupport : MonoBehaviour
     {
         SetupTeleportDefaults();
         SetupNonCap();
-        lc.PlayerController.SnapRotation = true;
-        lc.PlayerController.FixedSpeedSteps = 1;
+        //lc.PlayerController.SnapRotation = true;
+        //lc.PlayerController.FixedSpeedSteps = 1;
         lc.PlayerController.RotationEitherThumbstick = true;
         TeleportController.EnableRotation(true, false, false, true);
-        ActivateHandlers<TeleportInputHandlerAvatarTouch, TeleportAimHandlerLaser, TeleportTargetHandlerNode, TeleportOrientationHandlerThumbstick, TeleportTransitionBlink>();
-        var input = TeleportController.GetComponent<TeleportInputHandlerAvatarTouch>();
+        ActivateHandlers<TeleportInputHandlerTouch, TeleportAimHandlerLaser, TeleportTargetHandlerNode, TeleportOrientationHandlerThumbstick, TeleportTransitionBlink>();
+        var input = TeleportController.GetComponent<TeleportInputHandlerTouch>();
         input.AimingController = OVRInput.Controller.RTouch;
         //var input = TeleportController.GetComponent<TeleportAimHandlerLaser>();
         //input.AimingController = OVRInput.Controller.RTouch;
@@ -224,14 +225,14 @@ public class LocomotionSampleSupport : MonoBehaviour
         SetupTeleportDefaults();
         TeleportController.EnableRotation(true, false, false, true);
         TeleportController.EnableMovement(false, false, false, false);
-        lc.PlayerController.SnapRotation = true;
+        //lc.PlayerController.SnapRotation = true;
         lc.PlayerController.RotationEitherThumbstick = true;
-        lc.PlayerController.FixedSpeedSteps = 1;
+        //lc.PlayerController.FixedSpeedSteps = 1;
 
-        var input = TeleportController.GetComponent<TeleportInputHandlerAvatarTouch>();
-        input.InputMode = TeleportInputHandlerAvatarTouch.InputModes.ThumbstickTeleportForwardBackOnly;
+        var input = TeleportController.GetComponent<TeleportInputHandlerTouch>();
+        input.InputMode = TeleportInputHandlerTouch.InputModes.ThumbstickTeleportForwardBackOnly;
         input.AimingController = OVRInput.Controller.Touch;
-        ActivateHandlers<TeleportInputHandlerAvatarTouch, TeleportAimHandlerParabolic, TeleportTargetHandlerPhysical, TeleportOrientationHandlerThumbstick, TeleportTransitionBlink>();
+        ActivateHandlers<TeleportInputHandlerTouch, TeleportAimHandlerParabolic, TeleportTargetHandlerPhysical, TeleportOrientationHandlerThumbstick, TeleportTransitionBlink>();
         var orient = TeleportController.GetComponent<TeleportOrientationHandlerThumbstick>();
         orient.Thumbstick = OVRInput.Controller.Touch;
     }
@@ -245,11 +246,11 @@ public class LocomotionSampleSupport : MonoBehaviour
         lc.PlayerController.SnapRotation = true;
         lc.PlayerController.FixedSpeedSteps = 1;
 
-        var input = TeleportController.GetComponent<TeleportInputHandlerAvatarTouch>();
-        input.InputMode = TeleportInputHandlerAvatarTouch.InputModes.ThumbstickTeleport;
+        var input = TeleportController.GetComponent<TeleportInputHandlerTouch>();
+        input.InputMode = TeleportInputHandlerTouch.InputModes.ThumbstickTeleport;
         input.AimingController = OVRInput.Controller.LTouch;
         
-        ActivateHandlers<TeleportInputHandlerAvatarTouch, TeleportAimHandlerParabolic, TeleportTargetHandlerPhysical, TeleportOrientationHandlerThumbstick, TeleportTransitionBlink>();
+        ActivateHandlers<TeleportInputHandlerTouch, TeleportAimHandlerParabolic, TeleportTargetHandlerPhysical, TeleportOrientationHandlerThumbstick, TeleportTransitionBlink>();
         var orient = TeleportController.GetComponent<TeleportOrientationHandlerThumbstick>();
         orient.Thumbstick = OVRInput.Controller.LTouch;
     }
@@ -261,9 +262,9 @@ public class LocomotionSampleSupport : MonoBehaviour
         SetupTeleportDefaults();
         TeleportController.enabled = false;
         lc.PlayerController.EnableLinearMovement = true;
-        lc.PlayerController.SnapRotation = true;
+        //lc.PlayerController.SnapRotation = true;
         lc.PlayerController.RotationEitherThumbstick = false;
-        lc.PlayerController.FixedSpeedSteps = 1;
+        //lc.PlayerController.FixedSpeedSteps = 1;
     }
 
     // 
@@ -272,13 +273,13 @@ public class LocomotionSampleSupport : MonoBehaviour
         SetupTeleportDefaults();
         TeleportController.EnableRotation(true, false, false, true);
         TeleportController.EnableMovement(true, false, false, false);
-        lc.PlayerController.SnapRotation = true;
-        lc.PlayerController.FixedSpeedSteps = 1;
+        //lc.PlayerController.SnapRotation = true;
+        //lc.PlayerController.FixedSpeedSteps = 1;
 
-        var input = TeleportController.GetComponent<TeleportInputHandlerAvatarTouch>();
-        input.InputMode = TeleportInputHandlerAvatarTouch.InputModes.ThumbstickTeleportForwardBackOnly;
+        var input = TeleportController.GetComponent<TeleportInputHandlerTouch>();
+        input.InputMode = TeleportInputHandlerTouch.InputModes.ThumbstickTeleportForwardBackOnly;
         input.AimingController = OVRInput.Controller.RTouch;
-        ActivateHandlers<TeleportInputHandlerAvatarTouch, TeleportAimHandlerParabolic, TeleportTargetHandlerPhysical, TeleportOrientationHandlerThumbstick, TeleportTransitionBlink>();
+        ActivateHandlers<TeleportInputHandlerTouch, TeleportAimHandlerParabolic, TeleportTargetHandlerPhysical, TeleportOrientationHandlerThumbstick, TeleportTransitionBlink>();
         var orient = TeleportController.GetComponent<TeleportOrientationHandlerThumbstick>();
         orient.Thumbstick = OVRInput.Controller.RTouch;
     }

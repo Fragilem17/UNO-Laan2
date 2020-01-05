@@ -27,6 +27,8 @@ public class TeleportTargetHandlerPhysical : TeleportTargetHandler
 	/// <param name="end"></param>
 	protected override bool ConsiderTeleport(Vector3 start, ref Vector3 end)
 	{
+		//return true;
+
 		// If the ray hits the world, consider it valid and update the aimRay to the end point.
 		if (LocomotionTeleport.AimCollisionTest(start, end, AimCollisionLayerMask, out AimData.TargetHitInfo))
 		{
