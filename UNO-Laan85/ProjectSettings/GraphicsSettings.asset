@@ -70,10 +70,10 @@ GraphicsSettings:
     m_BuildTarget: 7
     m_Tier: 1
     m_Settings:
-      standardShaderQuality: 0
+      standardShaderQuality: 1
       renderingPath: 1
       hdrMode: 2
-      realtimeGICPUUsage: 25
+      realtimeGICPUUsage: 50
       useReflectionProbeBoxProjection: 0
       useReflectionProbeBlending: 0
       useHDR: 0

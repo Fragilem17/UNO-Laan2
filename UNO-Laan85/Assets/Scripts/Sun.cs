@@ -44,7 +44,10 @@ namespace Entropedia
 
 		public void SetTime(DateTime time)
 		{
+			Debug.Log("SetTime: " + time.ToLongTimeString());
 			this.time = time;
+			this.hour = time.Hour;
+			this.minutes = time.Minute;
 			OnValidate();
 		}
 
@@ -88,14 +91,14 @@ namespace Entropedia
 
 		private void Update()
 		{
+#if !UNITY_EDITOR
+#endif
 			time = time.AddSeconds(timeSpeed * Time.deltaTime);
 			if (frameStep == 0)
 			{
 				SetPosition();
 			}
 			frameStep = (frameStep + 1) % frameSteps;
-
-
 		}
 
 		void SetPosition()
