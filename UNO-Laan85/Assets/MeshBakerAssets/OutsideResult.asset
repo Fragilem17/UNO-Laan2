@@ -1,0 +1,383 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: OutsideResult
+  m_EditorClassIdentifier: 
+  version: 3252
+  resultType: 0
+  materialsAndUVRects:
+  - material: {fileID: 2100000, guid: fd2e3ed781e24114b9f0fcae119598ba, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.00024414062
+      y: 0.00024414062
+      width: 0.24951172
+      height: 0.25
+    srcObjName: Aflsuiting
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -1.0375
+      y: -0.0000025407069
+      width: 2.0625
+      height: 1.0000037
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: de56f41b4457afd40a4896e4d9c8d6e9, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.00024414062
+      y: 0.751709
+      width: 0.1184082
+      height: 0.10620117
+    srcObjName: Aflsuiting
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -0.00000059604645
+      y: 0.09999921
+      width: 1.9000002
+      height: 1.700001
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: 70ce879a70473bf48bd3886997ed639d, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.00024414062
+      y: 0.25073242
+      width: 0.24951172
+      height: 0.25
+    srcObjName: TuinHuis
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -4
+      y: 0
+      width: 8
+      height: 4
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: 9325cee5275788246834ca85e27cda42, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.00024414062
+      y: 0.5012207
+      width: 0.24951172
+      height: 0.25
+    srcObjName: Overkant (6)
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -41.999996
+      y: -0.2
+      width: 83.99999
+      height: 15.000173
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: 7cb2c8850acd89b438f3de529793a6d5, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.25024414
+      y: 0.00024414062
+      width: 0.24951172
+      height: 0.25
+    srcObjName: Plane (1)
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: b43b3cfeb66d12849b00b512c8c45ec9, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.50024414
+      y: 0.00024414062
+      width: 0.24951172
+      height: 0.25
+    srcObjName: Terras
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -2.0400007
+      y: -6.0616117
+      width: 8.040001
+      height: 10.101612
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: d3b19df57e8daa14097425c24993c464, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.75024414
+      y: 0.00024414062
+      width: 0.24951172
+      height: 0.25
+    srcObjName: TegelsBuiten
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -5.1000013
+      y: -4
+      width: 11.900002
+      height: 9.0525
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: 5d68d4e585a41de4792cef0a8e243d53, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.25024414
+      y: 0.25073242
+      width: 0.24951172
+      height: 0.25
+    srcObjName: KenEnLien 1
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -15.028868
+      y: -1.2452831
+      width: 29.699997
+      height: 16.093584
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: 9325cee5275788246834ca85e27cda42, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.25024414
+      y: 0.5012207
+      width: 0.24951172
+      height: 0.25
+    srcObjName: KenEnLien 1
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -14.799982
+      y: -0.2
+      width: 20.819983
+      height: 14.999999
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: cffc71598a15fa64da18d4eb647b02c7, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.119140625
+      y: 0.751709
+      width: 0.015380859
+      height: 0.015625
+    srcObjName: plantje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: 573aa61a101ef7646a2f7badf762ab2d, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.50024414
+      y: 0.25073242
+      width: 0.24951172
+      height: 0.25
+    srcObjName: plantje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -20.558817
+      y: -20.491955
+      width: 42.216484
+      height: 42.16925
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: ef91d5c192fdf464184fe88a4de8c251, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.75024414
+      y: 0.25073242
+      width: 0.24951172
+      height: 0.25
+    srcObjName: OutsidePhotoTexture
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -4.4242496
+      y: -0.57409835
+      width: 5.4867496
+      height: 1.5701768
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  resultMaterials:
+  - combinedMaterial: {fileID: 2100000, guid: db334e2e18115b04dac4a4b807c7c143, type: 2}
+    considerMeshUVs: 1
+    sourceMaterials:
+    - {fileID: 2100000, guid: fd2e3ed781e24114b9f0fcae119598ba, type: 2}
+    - {fileID: 2100000, guid: de56f41b4457afd40a4896e4d9c8d6e9, type: 2}
+    - {fileID: 2100000, guid: 70ce879a70473bf48bd3886997ed639d, type: 2}
+    - {fileID: 2100000, guid: 9325cee5275788246834ca85e27cda42, type: 2}
+    - {fileID: 2100000, guid: 7cb2c8850acd89b438f3de529793a6d5, type: 2}
+    - {fileID: 2100000, guid: b43b3cfeb66d12849b00b512c8c45ec9, type: 2}
+    - {fileID: 2100000, guid: d3b19df57e8daa14097425c24993c464, type: 2}
+    - {fileID: 2100000, guid: 5d68d4e585a41de4792cef0a8e243d53, type: 2}
+    - {fileID: 2100000, guid: 9325cee5275788246834ca85e27cda42, type: 2}
+    - {fileID: 2100000, guid: cffc71598a15fa64da18d4eb647b02c7, type: 2}
+    - {fileID: 2100000, guid: 573aa61a101ef7646a2f7badf762ab2d, type: 2}
+    - {fileID: 2100000, guid: ef91d5c192fdf464184fe88a4de8c251, type: 2}
+  resultMaterialsTexArray: []
+  doMultiMaterial: 0
